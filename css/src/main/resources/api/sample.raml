@@ -1,0 +1,63 @@
+#%RAML 1.0
+title: Accounts
+/accounts:
+  get:
+    queryParameters:
+      id :
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example: {
+              "Name" : "Hello",
+              "Phone" : "678345621"
+            }
+  post:
+    body:
+      application/json:
+        example:
+          {
+            "Name" : "Tejaswi",
+            "Phone" : "8765423187"
+          }
+
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                "Message" : "Updated Succesfully"
+              }
+  put:
+    body:
+      application/json:
+        example:
+          {
+            "Id" : 1234,
+            "pstatus__c" : New
+          }
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "Message" : "Updated succesfully!"
+              }
+/final:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: {
+              "hello" : "mani"
+              
+            }
+        
+            
+        
+          
+              
