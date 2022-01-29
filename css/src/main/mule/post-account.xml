@@ -5,13 +5,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<flow name="post-accountFlow" doc:id="01144045-19d5-47ed-b3e3-5278d5efd6dd" >
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="fc3809e0-9cc8-4fca-8b61-f2d471f8d676" />
 		<ee:transform doc:name="Transform Message" doc:id="565f3c48-b50c-4eff-96c6-2edb72ceb7e0" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
+output application/json
 ---
-{
-}]]></ee:set-payload>
+payload]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
 	</flow>
